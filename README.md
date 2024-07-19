@@ -11,7 +11,8 @@
 <<<<<<< Updated upstream
 2171548 2171548
 =======
- 연습입니다  
+ 연습입니다
+
 +11
 >>>>>>> Stashed changes
 >>>>>>> gms
