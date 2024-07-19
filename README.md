@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 21312401    
 
+=======
+2131240
+2171548 구민선
+>>>>>>> gms
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
