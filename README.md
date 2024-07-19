@@ -8,6 +8,7 @@
 2271417 양정우
 
 2131240 성규현
+2171548 2171548
 >>>>>>> gms
 # Getting Started with Create React App
 
