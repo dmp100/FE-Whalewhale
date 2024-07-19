@@ -8,7 +8,13 @@
 2271417 양정우
 
 2131240 성규현
+<<<<<<< Updated upstream
 2171548 2171548
+=======
+ 연습입니다
+
++11
+>>>>>>> Stashed changes
 >>>>>>> gms
 # Getting Started with Create React App
 
