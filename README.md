@@ -1,5 +1,9 @@
+<<<<<<< Updated upstream
 ㄹㄴㅁㄹㄴㅁㄹㄴㅁㄴ
 
+=======
+git Test 1214
+>>>>>>> Stashed changes
 
 # Getting Started with Create React App
 
