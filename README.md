@@ -19,7 +19,11 @@
 =======
 
 develop
+<<<<<<< Updated upstream
 2171548 구민선 연습1
+>>>>>>> Stashed changes
+=======
+연습1
 >>>>>>> Stashed changes
 >>>>>>> gms
 # Getting Started with Create React App
