@@ -14,6 +14,12 @@
  연습입니다
 
 +11
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+
+develop
+2171548 구민선 연습1
 >>>>>>> Stashed changes
 >>>>>>> gms
 # Getting Started with Create React App
