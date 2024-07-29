@@ -1,31 +1,36 @@
-<<<<<<< HEAD
+ HEAD
 21312401    
-
-=======
+ㅏㅏ
 2131240
 2171548 구민선
 
 2271417 양정우
 
 2131240 성규현
-<<<<<<< Updated upstream
+ Updated upstream
 2171548 2171548
-=======
+ gms
+
  연습입니다
 
 +11
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
+ Updated upstream
+  Stashed changes
+
 
 develop
-<<<<<<< Updated upstream
+ Updated upstream
 2171548 구민선 연습1
->>>>>>> Stashed changes
-=======
+ Stashed changes
+
 연습1
->>>>>>> Stashed changes
->>>>>>> gms
+ Stashed changes
+
+
++11
+연습연습
+develop
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
