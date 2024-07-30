@@ -78,7 +78,7 @@ const HelpWithSpeechPage = () => {
           <div className="he-input-group">
             <label className="he-label">본문</label>
             <textarea
-              placeholder="본문을 작성해 주세요.(최대 100자)"
+              placeholder="본문을 작성해 주세요.(150~1000자)"
               className="he-textarea"
               value={content}
               onChange={(e) => setContent(e.target.value)}
