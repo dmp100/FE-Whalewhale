@@ -1,5 +1,3 @@
-// App.js 
-
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import CreateSpeechPage from './screen/CreateSpeechPage';
@@ -49,7 +47,7 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/forgot-password" element={<PasswordResetPage />} />
           <Route path="/generation" element={<GenerationPage />} />
-          <Route path="/help-with-speech" element={<HelpWithSpeechPage />} />
+          <Route path="/help-with-speech" element={<HelpWithSpeechPage showModal={showModal} />} />
           <Route path="/view-memories" element={<ViewMemoriesPage />} />
         </Routes>
         {modalVisible && (
