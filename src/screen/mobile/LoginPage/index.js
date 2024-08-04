@@ -1,14 +1,15 @@
 // LoginPage/index.js
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
-import logoImage from '../../images/logo.png';
+import logoImage from '../../../images/logo.png';
 
 const LoginPage = ({ login }) => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
+  const passwordInputRef = useRef(null);
 
   const validateForm = () => {
     const newErrors = {};
@@ -36,6 +37,18 @@ const LoginPage = ({ login }) => {
     }
   };
 
+  const handleUsernameKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      passwordInputRef.current.focus();
+    }
+  };
+
+  const handlePasswordKeyPress = (event) => { // 엔터를 누를 시, 로그인
+    if (event.key === 'Enter') {
+      handleLogin();
+    }
+  };
+
   const handleLogoClick = () => {
     navigate('/');
   };
@@ -51,6 +64,7 @@ const LoginPage = ({ login }) => {
         className="input-field"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        onKeyDown={handleUsernameKeyPress} // 엔터를 누를 시, 비밀번호 입력 필드로 이동
       />
       {errors.email && <div className="error-message">{errors.email}</div>}
       <input
@@ -59,6 +73,8 @@ const LoginPage = ({ login }) => {
         className="input-field"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        onKeyDown={handlePasswordKeyPress} // 엔터를 누를 시, 로그인
+        ref={passwordInputRef} // 엔터누르면 밑으로 내려가도록
       />
       {errors.password && <div className="error-message">{errors.password}</div>}
       <button className="login-button" onClick={handleLogin}>로그인</button>
