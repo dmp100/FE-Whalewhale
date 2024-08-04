@@ -1,9 +1,8 @@
-// MainPage/index.js
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
-import logoImage from '../../images/logo.png';
-import blankBoxImage from '../../images/main.png';
+import logoImage from '../../../images/logo.png';
+import blankBoxImage from '../../../images/main.png';
 
 const MainPage = ({ isLoggedIn, user, logout }) => {
   const navigate = useNavigate();
