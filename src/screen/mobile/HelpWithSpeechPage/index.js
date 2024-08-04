@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
 
-const HelpWithSpeechPage = () => {
+const HelpWithSpeechPage = ({ showModal }) => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [minutes, setMinutes] = useState('');
@@ -32,7 +32,7 @@ const HelpWithSpeechPage = () => {
         const wordCount = content.trim().split(/\s+/).length;
         estimatedDuration = Math.ceil((wordCount / wordsPerMinute) * 60);
       }
-      alert('대본이 생성되었습니다!');
+      showModal({ title, content, estimatedDuration });
     } else {
       alert('제목과 본문 작성을 완료해주세요!');
     }
@@ -54,6 +54,13 @@ const HelpWithSpeechPage = () => {
     setIsChecked(!isChecked);
   };
 
+  const handleNumberInput = (e) => {
+    const charCode = e.which ? e.which : e.keyCode;
+    if (charCode < 48 || charCode > 57) {
+      e.preventDefault();
+    }
+  };
+  
   return (
     <div className="he-page-container">
       <div className="he-header">
@@ -153,6 +160,7 @@ const HelpWithSpeechPage = () => {
                   className="he-time-input"
                   value={minutes}
                   onChange={(e) => setMinutes(e.target.value)}
+                  onKeydown={handleNumberInput}
                   max={20}
                 />
                 <span className="he-time-span">분</span>
@@ -162,6 +170,7 @@ const HelpWithSpeechPage = () => {
                   className="he-time-input"
                   value={seconds}
                   onChange={(e) => setSeconds(e.target.value)}
+                  onKeydown={handleNumberInput}
                   max={60}
                 />
                 <span className="he-time-span">초</span>
