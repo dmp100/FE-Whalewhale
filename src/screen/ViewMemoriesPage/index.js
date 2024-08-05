@@ -11,7 +11,7 @@ function ViewSpeechPage() {
   const [bookmark, setBookmark] = useState([]); // 즐겨찾기 버튼
 
   // 버튼 리스트 항목
-  const buttons = ['최신순', '이름순', '검색어 관련순', '즐겨찾기순'];
+  const buttons = ['최신순', '이름순', '검색어 관련순', '즐겨찾기순'];  
 
   const [titles, setTitle] = useState([
     '편집 디자인 발표',

@@ -8,7 +8,7 @@
   background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 3px; /* 둥근 테두리 추가 */
-}
+}   
 
 .vi-header {
   display: flex;
