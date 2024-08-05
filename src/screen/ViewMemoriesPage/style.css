@@ -3,35 +3,20 @@
 .vi-view-memories-page {
   position: relative; 
   width: 100%;
-<<<<<<< HEAD
   height: 100vh;
   margin: 0;
   background-color: #ffffff;
   box-sizing: border-box;
   border-radius: 3px; /* 둥근 테두리 추가 */
-=======
-  height:100%;
-  margin : 0;
-  background-color: #ffffff;
-  box-sizing: border-box;
-  border: 5px solid #87CEEB; /* 액자 테두리 추가 */
-  border-radius: 15px; /* 둥근 테두리 추가 */
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
 }
 
 .vi-header {
   display: flex;
   flex-direction: row;
   padding: 16px;
-<<<<<<< HEAD
   margin: 0 auto;
   width: 91%;
   height: 26px;
-=======
-  margin-left: -10px;
-  width: 100%;
-  height:26px;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
   background: #FFFFFF;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
   border-bottom: 3px solid #F2F2F2; /* 헤더 아래 테두리 추가 */
@@ -43,18 +28,8 @@
   align-items: center;
   padding: 0;
   gap: 8px;
-<<<<<<< HEAD
   width: 90%;
   height: 100%;
-=======
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  margin-left: 0px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
 }
 
 .vi-back-button {
@@ -75,53 +50,35 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  text-align: center;
-  width: 350;
+  text-align: flex-end;
+  width: 100%;
   color: #191919;
-<<<<<<< HEAD
-=======
-  margin: 0px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
 }
 
 .vi-main {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   align-items: flex-start;
   padding: 15px;
-=======
-  justify-content: flex-start;
-  padding: 0px 20px;
-  gap:64px;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
   position: relative;
-  width: 97%;
+  width: 96%;
   height: 100%;
-  top: 50px;
+  top: 30px;
+  overflow-y: auto;
 }
 
 .vi-main-1 {
   display: flex;
   flex-direction: column;
-<<<<<<< HEAD
   justify-content: center;
   align-items: center;
   gap: 15px;
   width: 100%;
   max-width: 1200px;
   background-color: #ffffff;
-=======
-  justify-content: flex-start;
-  gap:20px;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
   position: relative;
-  width: 100%;
-  height: 80px;
-  background-color: #ffffff;
+  z-index: 2;
+  padding-bottom: 5px;
 }
 
 .vi-search {
@@ -130,14 +87,8 @@
   justify-content: space-between;
   width: 100%;
   height: 40px;
-<<<<<<< HEAD
   padding: 0;
   gap: 5px;
-=======
-  padding: 0px;
-  gap: 10px;
-  margin-left: -5px;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
   background-color: #F2F2F2;
   border-radius: 8px;
 }
@@ -148,14 +99,6 @@
   border: none;
   background: #F2F2F2;
   border-radius: 8px;
-<<<<<<< HEAD
-=======
-  margin-top: 5px;
-  flex: 1;
-  order: 0;
-  flex-grow: 1;
-  min-width: 0;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
 }
 
 .vi-search-input::placeholder {
@@ -178,38 +121,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
   padding-left: 70%;
   gap: 5px;
-=======
-  padding: 0px 0px 0px 70%;
-  gap: 5px;
-  width: 100px;
-  height: 30px;
-  flex: none;
-  order: 0;
-  flex-grow: 1;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
 }
 
 .vi-sort-label {
   font-family: 'Pretendard';
   font-weight: 400;
   font-size: 15px;
-<<<<<<< HEAD
   color: #666666;
   margin-top: 3%;
-=======
-  line-height: 17px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  color: #666666;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  line-height: 40px;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
 }
 
 .vi-sort-button {
@@ -227,30 +148,18 @@
 .vi-sort-icon {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  gap: 2px;
+  gap: 0px;
   width: 25px;
   height: 40px;
-<<<<<<< HEAD
   padding-right: 5px;
-=======
-  flex: none;
-  order: 0;
-  flex-grow: 0;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
 }
 
 .vi-line1, .vi-line2, .vi-line3 {
   height: 1px;
   background: #666666;
-<<<<<<< HEAD
   margin: 4px 0;
-=======
-  flex: none;
-  flex-grow: 0;
-  margin: 4px 2px 3px 5px;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
 }
 
 .vi-line1 {
@@ -258,12 +167,7 @@
 }
 
 .vi-line2 {
-<<<<<<< HEAD
   width: 12px;
-=======
-  width: 14px;
-  order: 1;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
 }
 
 .vi-line3 {
@@ -274,7 +178,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 11px;
+  gap: 8px;
   position: absolute;
   top: 100%;
   left: 20px;
@@ -283,13 +187,8 @@
   padding: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   height: 75px;
-<<<<<<< HEAD
   width: 111px;
   z-index: 1000;
-=======
-  width: 110px;
-  margin: 0px 0px 0px 52%;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
 }
 
 .vi-button-item {
@@ -325,28 +224,15 @@
   gap: 10px;
   padding: 0;
   width: 90%;
-<<<<<<< HEAD
   height: 71%;
   margin-top: 30px;
-=======
-  height: auto; 
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
 }
 
 .vi-content {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-<<<<<<< HEAD
   padding: 20px 0px 17px 0px; 
   background-color: #ffffff; 
   margin: 0 15px; /* Adjusted margin for consistent spacing */
-=======
-  padding:20px 0px 20px 0px; 
-  background-color: #ffffff; 
-  width: 100%;
-  height: 100%; 
-  gap: 5px;
-  margin: 0px 5px 0px 5px;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
   border-top: solid 1px #BFBFBF;
   transition: transform 0.3s ease;
 }
@@ -360,18 +246,10 @@
   justify-content: space-between; /* To position title and bookmark properly */
   align-items: center;
   width: 100%;
-<<<<<<< HEAD
-=======
-  height: 30%;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
   font-family: 'Pretendard';
   font-weight: 500;
   font-size: 15px;
   color: #191919;
-<<<<<<< HEAD
-=======
-  margin-bottom: 10px;
->>>>>>> parent of 4370c20 (0730_추억하기_화면_정렬)
 }
 
 .vi-content-text {
