@@ -2,7 +2,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './style.css';
-import whaleGif from '../../images/whale.gif';
+import whaleGif from '../../../images/whale.gif';
 
 const GeneratedSpeechPage = ({ speechData, hideModal }) => {
   const navigate = useNavigate();

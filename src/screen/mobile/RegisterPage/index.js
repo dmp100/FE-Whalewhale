@@ -1,10 +1,11 @@
+// RegisterPage/index.js
 import React, { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import axios from 'axios';
 import './style.css';
-import logoImage from '../../images/logo.png';  // 로고 이미지 임포트
+import logoImage from '../../../images/logo.png';  // 로고 이미지 임포트
 import { useNavigate } from 'react-router-dom';
 
 const schema = yup.object().shape({
