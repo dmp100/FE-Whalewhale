@@ -5,7 +5,7 @@ import './style.css';
 function ViewSpeechPage() {
   const navigate = useNavigate();
 
-  // 상태 설정
+  // 상태 설정  
   const [isListVisible, setIsListVisible] = useState(false);
   const [selectedButton, setSelectedButton] = useState(null);
   const [bookmark, setBookmark] = useState([]); // 즐겨찾기 버튼
