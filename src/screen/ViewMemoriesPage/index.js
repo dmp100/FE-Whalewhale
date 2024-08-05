@@ -8,9 +8,10 @@ function ViewSpeechPage() {
   // 상태 설정
   const [isListVisible, setIsListVisible] = useState(false);
   const [selectedButton, setSelectedButton] = useState(null);
+  const [bookmark, setBookmark] = useState([]); // 즐겨찾기 버튼
 
   // 버튼 리스트 항목
-  const buttons = ['최신순', '이름순', '검색어 관련순'];
+  const buttons = ['최신순', '이름순', '검색어 관련순', '즐겨찾기순'];
 
   const [titles, setTitle] = useState([
     '편집 디자인 발표',
@@ -42,52 +43,58 @@ function ViewSpeechPage() {
     setIsListVisible(prevState => !prevState);
   };  
   
-  // 버튼 선택 및 정렬 함수
   const handleButtonClick = (index) => {
     setSelectedButton(index);
 
     // 정렬 로직
-    const titlesCopy = [...titles];
-    const contentsCopy = [...contents];
-    const datesCopy = [...dates];
+    const combined = titles.map((title, i) => ({
+        title,
+        content: contents[i],
+        date: dates[i],
+        isBookmarked: bookmark.includes(i)
+    }));
 
-    if (index === 0) { // 최신순
-      const combined = titlesCopy.map((title, i) => ({
-        title,
-        content: contentsCopy[i],
-        date: datesCopy[i]
-      }));
-      combined.sort((a, b) => new Date(b.date) - new Date(a.date));
-      setTitle(combined.map(item => item.title));
-      setContent(combined.map(item => item.content));
-      setDate(combined.map(item => item.date));
-    } else if (index === 1) { // 이름순
-      const combined = titlesCopy.map((title, i) => ({
-        title,
-        content: contentsCopy[i],
-        date: datesCopy[i]
-      }));
-      combined.sort((a, b) => a.title.localeCompare(b.title));
-      setTitle(combined.map(item => item.title));
-      setContent(combined.map(item => item.content));
-      setDate(combined.map(item => item.date));
-    } else if (index === 2) { // 검색어 관련순
-      // 검색어 관련순은 특정 로직에 따라 다르게 구현할 수 있습니다.
-      // 현재는 최신순으로 정렬.
-      const combined = titlesCopy.map((title, i) => ({
-        title,
-        content: contentsCopy[i],
-        date: datesCopy[i]
-      }));
-      combined.sort((a, b) => new Date(b.date) - new Date(a.date));
-      setTitle(combined.map(item => item.title));
-      setContent(combined.map(item => item.content));
-      setDate(combined.map(item => item.date));
+    // 즐겨찾기순 정렬 처리
+    if (index === 3) {
+        combined.sort((a, b) => {
+            if (a.isBookmarked && !b.isBookmarked) return -1; // a가 즐겨찾기, b가 아닌 경우
+            if (!a.isBookmarked && b.isBookmarked) return 1; // b가 즐겨찾기, a가 아닌 경우
+            return new Date(b.date) - new Date(a.date); // 즐겨찾기가 아닌 경우 최신순 정렬
+        });
+    } else {
+        // 일반 정렬 처리
+        if (index === 0) {
+            // 최신순
+            combined.sort((a, b) => new Date(b.date) - new Date(a.date));
+        } else if (index === 1) {
+            // 이름순
+            combined.sort((a, b) => a.title.localeCompare(b.title));
+        } else if (index === 2) {
+            // 검색어 관련순
+            combined.sort((a, b) => new Date(b.date) - new Date(a.date)); // 현재 로직이 동일하므로 최신순 사용
+        }
     }
-  };
 
+    // 정렬된 데이터로 상태 업데이트
+    setTitle(combined.map(item => item.title));
+    setContent(combined.map(item => item.content));
+    setDate(combined.map(item => item.date));
+};
+
+
+  
   const handleBack = () => {
     navigate('/');
+  };
+
+  const toggleBookmark = (index) => { // 즐겨찾기
+    setBookmark((prevBookmarks) => {
+      if (prevBookmarks.includes(index)) {
+        return prevBookmarks.filter((i) => i !== index);
+      } else {
+        return [...prevBookmarks, index];
+      }
+    });
   };
 
   return (
@@ -145,7 +152,19 @@ function ViewSpeechPage() {
         <div className='vi-main2'>
           {titles.map((title, index) => (
             <div key={index} className='vi-content'>
-              <div className="vi-title">{title}</div>
+              <div className="vi-title">{title}
+                <div className="Bookmark" onClick={() => toggleBookmark(index)}>
+                  {bookmark.includes(index) ? (
+                    <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" fill="#FFD700"/>
+                    </svg>
+                  ) : (
+                    <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" stroke="#D9D9D9" fill="none"/>
+                    </svg>
+                  )}
+                </div>
+              </div>
               <div className="vi-content-text">{contents[index]}</div>
               <div className="vi-date">{dates[index]}</div>
             </div>
