@@ -3,38 +3,33 @@
 .vi-view-memories-page {
   position: relative; 
   width: 100%;
-  height:100vh;
-  margin : 0px;
+  height: 100vh;
+  margin: 0;
   background-color: #ffffff;
   box-sizing: border-box;
-  border: 5px solid #87CEEB; /* 액자 테두리 추가 */
-  border-radius: 15px; /* 둥근 테두리 추가 */
-  
-}
+  border-radius: 3px; /* 둥근 테두리 추가 */
+}   
 
 .vi-header {
   display: flex;
   flex-direction: row;
   padding: 16px;
-  margin: 0px auto;
+  margin: 0 auto;
   width: 91%;
-  height:26px;
-  border-radius: 15px;
+  height: 26px;
   background: #FFFFFF;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
-  border-bottom: 5px solid #87CEEB; /* 헤더 아래 테두리 추가 */
+  border-bottom: 3px solid #F2F2F2; /* 헤더 아래 테두리 추가 */
 }
 
 .vi-header-div {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
+  padding: 0;
   gap: 8px;
-  margin: 0;
   width: 90%;
   height: 100%;
-
 }
 
 .vi-back-button {
@@ -58,8 +53,6 @@
   text-align: flex-end;
   width: 100%;
   color: #191919;
-
-
 }
 
 .vi-main {
@@ -67,7 +60,6 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 15px;
-  gap:0px;
   position: relative;
   width: 96%;
   height: 100%;
@@ -80,7 +72,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap:15px;
+  gap: 15px;
   width: 100%;
   max-width: 1200px;
   background-color: #ffffff;
@@ -95,98 +87,50 @@
   justify-content: space-between;
   width: 100%;
   height: 40px;
-  padding: 0px;
+  padding: 0;
   gap: 5px;
-  margin-left: -10px;
   background-color: #F2F2F2;
   border-radius: 8px;
 }
 
 .vi-search-input {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex: 1;
   padding: 8px 12px;
-  gap: 0px;
-  width: 100%;
-  height: 20px;
   border: none;
   background: #F2F2F2;
   border-radius: 8px;
-  margin-top: 5px;
-
-  flex: 1;
-  order: 0;
-  flex-grow: 1;
-
 }
 
 .vi-search-input::placeholder {
-  margin: 0;
-  width: 100%;
-  height: 18px;
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
-  line-height: 18px;
-  display: flex;
-  align-items:flex-start;
-  text-align: flex-start;
   color: #BFBFBF;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 
 .vi-search-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  gap: 0px;
-  border:none;
-  margin: 15px;
   width: 24px;
   height: 24px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 .vi-list-button {
   display: flex;
-  flex-direction: raw;
   justify-content: center;
-  align-items: flex-start;
-  padding: 0px 0px 0px 70%;
+  align-items: center;
+  padding-left: 70%;
   gap: 5px;
-  width: 100px;
-  height: 20px;
-  flex: none;
-  order: 0;
-  flex-grow: 1;
 }
 
 .vi-sort-label {
-  width:auto;
-  height: 20px;
   font-family: 'Pretendard';
-  font-style: normal;
   font-weight: 400;
   font-size: 15px;
-  line-height: 17px;
-  display: flex;
-  align-items: flex-end;
-  text-align: center;
   color: #666666;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  line-height: 40px;
   margin-top: 3%;
-
 }
 
 .vi-sort-button {
@@ -198,8 +142,6 @@
   height: 25px;
   border: none;
   border-radius: 3px;
-  gap: 2px;
-  flex-grow: 0;
   background-color: #FFFFFF;
 }
 
@@ -211,34 +153,25 @@
   gap: 0px;
   width: 25px;
   height: 40px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
   padding-right: 5px;
-
 }
 
 .vi-line1, .vi-line2, .vi-line3 {
   height: 1px;
   background: #666666;
-  flex: none;
-  flex-grow: 0;
-  margin: 4px 0px 1px 7px;
+  margin: 4px 0;
 }
 
 .vi-line1 {
   width: 16px;
-  order: 0;
 }
 
 .vi-line2 {
   width: 12px;
-  order: 1;
 }
 
 .vi-line3 {
   width: 8px;
-  order: 2;
 }
 
 .vi-button-list {
@@ -255,7 +188,6 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   height: 75px;
   width: 111px;
-  margin: 0px 0px 0px 60%;
   z-index: 1000;
 }
 
@@ -263,12 +195,8 @@
   width: 110px;
   height: 17px;
   font-family: 'Pretendard' !important;
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
-  display: flex;
-  align-items: center;
   color: #666666;
   border: none;
   background: none;
@@ -278,7 +206,6 @@
 .vi-button-item .vi-check-icon {
   width: 16px;
   height: 16px;
-  background: #FFFFFF;
   display: none;
   margin-left: 5px;
 }
@@ -287,7 +214,7 @@
   display: block;
 }
 
-.vi-button-item.vi-button-item.selected {
+.vi-button-item.selected {
   color: #3A9BD9;
 }
 
@@ -295,22 +222,17 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  padding: 0px;
+  padding: 0;
   width: 90%;
   height: 71%;
   margin-top: 30px;
-  
- 
 }
 
 .vi-content {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  padding:20px 0px 17px 0px; 
+  padding: 20px 0px 17px 0px; 
   background-color: #ffffff; 
-  width: 100%;
-  height: 45%; 
-  gap: 0px;
-  margin: 0px 0px 0px 15px;
+  margin: 0 15px; /* Adjusted margin for consistent spacing */
   border-top: solid 1px #BFBFBF;
   transition: transform 0.3s ease;
 }
@@ -320,28 +242,22 @@
 }
 
 .vi-title {
+  display: flex;
+  justify-content: space-between; /* To position title and bookmark properly */
+  align-items: center;
   width: 100%;
-  height: 25%;
   font-family: 'Pretendard';
-  font-style: normal;
   font-weight: 500;
   font-size: 15px;
-  line-height: 18px;
-  display: flex;
-  align-items: center;
   color: #191919;
-  
 }
 
 .vi-content-text {
   width: 100%;
   height: 35px;
   font-family: 'Pretendard';
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 17px;
-  margin: 15px 0px 15px 0px;
   color: #8C8C8C; 
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -354,13 +270,20 @@
   width: 100%;
   height: 16px;
   font-family: 'Pretendard';
-  font-style: normal;
   font-weight: 400;
   font-size: 13px;
-  line-height: 16px;
-  display: flex;
-  align-items: flex-end;
-  text-align: center;
   color: #BFBFBF;
-  margin: 0px 0px 0px 56%;
+  text-align: right; /* Align date to the right */
+}
+
+.Bookmark {
+  cursor: pointer;
+  margin-left: 5%;
+  width: 20px; /* Size of the bookmark icon */
+  height: 20px; /* Size of the bookmark icon */
+}
+
+.Bookmark svg {
+  width: 100%;
+  height: 100%;
 }
