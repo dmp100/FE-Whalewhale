@@ -79,10 +79,14 @@ function ViewSpeechPage() {
     setTitle(combined.map(item => item.title));
     setContent(combined.map(item => item.content));
     setDate(combined.map(item => item.date));
+    
+    // 즐겨찾기 상태 업데이트
+    const newBookmarks = combined
+      .filter(item => item.isBookmarked)
+      .map((_, i) => i); // 즐겨찾기 인덱스 업데이트
+    setBookmark(newBookmarks);
 };
 
-
-  
   const handleBack = () => {
     navigate('/');
   };
